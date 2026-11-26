@@ -11,12 +11,21 @@ import { DEFAULT_LOCALE } from "./constants.js";
 export function browserToIconName(browser) {
   if (browser.startsWith("firefox")) {
     return "firefox";
-  } else if (browser === "webview_android") {
-    return "webview";
-  } else if (browser === "webview_ios") {
-    return "safari";
   } else {
-    return browser.split("_", 1)[0] ?? "";
+    switch (browser) {
+      case "webview_android": {
+        return "webview";
+      }
+      case "webview_ios": {
+        return "safari";
+      }
+      case "webview_openharmony": {
+        return "openharmony";
+      }
+      default: {
+        return browser.split("_", 1)[0] ?? "";
+      }
+    }
   }
 }
 

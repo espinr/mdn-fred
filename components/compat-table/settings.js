@@ -76,6 +76,7 @@ export const DEFAULT_BROWSERS = Object.freeze([
   "samsunginternet_android",
   "webview_android",
   "webview_ios",
+  "webview_openharmony",
 
   // JavaScript runtimes.
   "bun",
